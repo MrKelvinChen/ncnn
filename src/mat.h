@@ -739,7 +739,7 @@ NCNN_EXPORT void quantize_to_int8(const Mat& src, Mat& dst, const Mat& scale_dat
 NCNN_EXPORT void dequantize_from_int32(const Mat& src, Mat& dst, const Mat& scale_data, const Mat& bias_data, const Option& opt = Option());
 NCNN_EXPORT void requantize_from_int32_to_int8(const Mat& src, Mat& dst, const Mat& scale_in_data, const Mat& scale_out_data, const Mat& bias_data, int activation_type, const Mat& activation_params, const Option& opt = Option());
 //TODO add gaussian blur
-NCNN_EXPORT void gaussian_blur(const Mat& src, Mat& dst, int w,int h, const Option& opt)
+NCNN_EXPORT void gaussian_blur(const Mat& src, Mat& dst, int w, int h, const Option& opt)
 
 inline Mat::Mat()
     : data(0), refcount(0), elemsize(0), elempack(0), allocator(0), dims(0), w(0), h(0), c(0), cstep(0)
