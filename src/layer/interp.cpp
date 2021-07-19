@@ -562,6 +562,32 @@ int Interp::forward(const std::vector<Mat>& bottom_blobs, std::vector<Mat>& top_
         delete[] buf;
     }
 
+    //TODO add gaussian blur
+    // if (resize_type == 4) //gaussian_blur
+    // {
+    //     int* buf = new int[outw + outh + outw * 2 + outh * 2];
+
+    //     int* xofs = buf;       //new int[outw]
+    //     int* yofs = buf + outw;//new int[outh]
+
+    //     float* alpha = (float*)(buf + outw + outh);
+    //     float* beta = (float*)(buf + outw + outh + outw * 2);
+
+    //     gaussian_coeffs();
+    //     gaussian_coeffs();
+
+    //     #pragma  omp parallel for num_threads(opt.num_threads)
+    //     for(int q=0;q<channels;++q)
+    //     {
+    //         const Mat src=bottom_blob.channel(q);
+    //         Mat dst=top_blob.channel(q);
+
+    //         //gaussian_blur_image(src, dst, alpha, xofs, beta, yofs);
+    //     }
+
+    //     delete[] buf;
+    // }
+
     return 0;
 }
 

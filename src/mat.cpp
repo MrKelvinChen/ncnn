@@ -1163,6 +1163,29 @@ void resize_bicubic(const Mat& src, Mat& dst, int w, int h, const Option& opt)
     delete interp;
 }
 
+//TODO add gaussian blur
+void gaussian_blur(const Mat& src, Mat& dst, int w,int h, const Option& opt)
+// {
+//     Layer* interp = create_layer(LayerType::Interp);
+
+//     ParamDict pd;
+//     pd.set(0, 4);
+//     pd.set(3, h);
+//     pd.set(4, w);
+
+//     interp->load_param(pd);
+
+//     interp->create_pipeline(opt);
+
+//     interp->forward(src, dst, opt);
+
+//     interp->destroy_pipeline(opt);
+
+//     delete interp;
+// }
+
+
+
 void convert_packing(const Mat& src, Mat& dst, int _elempack, const Option& opt)
 {
     Layer* packing = create_layer(LayerType::Packing);
